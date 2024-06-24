@@ -1,0 +1,151 @@
+footer .content-login {
+    padding: 25px 0;
+    width: 100%;
+    background-color: #000
+}
+
+footer .content-login a {
+    color: #fff
+}
+
+footer .content-login .more-content {
+    color: #67c1f5;
+    font-size: 24px;
+    text-align: center;
+    font-family: "Motiva Sans", Sans-serif
+}
+
+footer .content-login p {
+    padding-top: 16px;
+    text-align: center;
+    font-size: 15px;
+    color: #8f98a0;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300
+}
+
+footer .content-login .style-button {
+    text-align: center
+}
+
+footer .content-login .style-button p {
+    padding: 0
+}
+
+footer .content-login .style-button p a:hover {
+    color: #67c1f5
+}
+
+footer .content-login .style-button .box-login {
+    margin-top: 15px;
+    text-align: unset;
+    display: inline-block;
+    border-radius: 2px;
+    width: 105px;
+    height: 44px;
+    background: #799905;
+    background: linear-gradient(to bottom, #799905 5%, #536904 95%)
+}
+
+footer .content-login .style-button .box-login span {
+    
+    margin-top: 5px;
+    color: #d2e885 !important
+}
+
+footer .content-login .style-button .box-login:hover {
+    background: #768e1e
+}
+
+footer .content-login .style-button .box-login:hover span {
+    color: #fff !important
+}
+
+footer .small-footer {
+    height: 200px;
+    background: #171a21
+}
+
+footer .small-footer a {
+    color: #fff
+}
+
+footer .small-footer .footer-content {
+    margin: 0 289px;
+    color: #8f98a0;
+    height: 200px;
+    padding-top: 16px
+}
+footer .small-footer .footer-content .logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .small-footer .footer-content .div-rule {
+    height: 8px;
+    border-top: 1px solid #363c44
+}
+
+
+footer .small-footer .footer-content .footer-logo-steam {
+    margin-top: 10px;
+}
+
+footer .small-footer .footer-content .footer-logo-valve {
+   
+    margin-top: 10px
+}
+
+footer .small-footer .footer-content .footer-logo-valve img {
+    width: 88px;
+    height: 25px;
+    
+}
+
+footer .small-footer .footer-content .footer-text {
+    margin-top: 10px;
+    margin-left: 12px;
+    color: #8f98a0;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px
+}
+
+footer .small-footer .footer-content .footer-text a {
+    color: #c6d4df
+}
+
+footer .small-footer .footer-content .footer-text a:hover {
+    color: #fff
+}
+
+footer .small-footer .footer-content .valve-links {
+    height: 18.4px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    color: #61686d
+}
+
+footer .small-footer .footer-content .valve-links a {
+    color: #c6d4df;
+    outline: 0px none
+}
+
+footer .small-footer .footer-content .valve-links a img {
+    align-items: center;
+    display: inline;
+    height: 16px;
+    width: 16px
+}
+
+footer .small-footer .footer-content .valve-links a:hover {
+    color: #fff
+}
+
+html {
+    scroll-behavior: smooth
+}

@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box
+}
+
+ol,
+ul,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    display: block
+}
+
+input,
+button {
+    outline: none;
+    border: none
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #171d25;
+    height: 100px;
+    padding: 0 280px
+}
+
+header .logo {
+    padding-top: 28px
+}
+
+header .logo a{
+    text-align: center;
+}
+
+header .logo a img {
+    width: 170px;
+    height: 44px
+}
+
+header .nav-menu {
+    position: absolute;
+    display: flex;
+    left: 466px;
+}
+
+header .nav-menu li {
+    margin-right: 15px
+}
+header #active {
+    color: #1a9fff;
+    text-decoration: underline
+}
+header .nav-menu li a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding-top: 45px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    line-height: 16px;
+    float: left;
+    font-size: 14px;
+    color: #dcdedf;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+header .nav-menu li a:hover {
+    color: #fff
+}
+
+header .right-info {
+    position: absolute;
+    right: 212px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end
+}
+
+header .right-info .big-li {
+    margin-left: 10px;
+    color: #b8b6b4;
+    height: 22px
+}
+
+header .right-info>li:first-child {
+    text-decoration: none;
+    background: #5c7e10;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+header .right-info li>a:hover{
+    color: white;
+}
+
+header .right-info li a {
+    font-size: 14px;
+    color: #b8b6b4;
+    text-align: center
+}
+
+header .right-info .login {
+    color: #b8b6b4;
+    position: relative
+}
+
+
+header .right-info .user-option .dropdown-user-infor{
+background-color: #404045;
+position: absolute;
+margin-top: 7px;
+}
+header .right-info .user-option .dropdown-user-infor li{
+    color: #b8b6b4;
+    font-size:15px;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+header .right-info .user-option .dropdown-user-infor li:hover{
+    background-color:#29292c;
+    color: white;
+}
+header .right-info .user-option .dropdown-user-infor li>a:hover{
+    color: white;
+}
+header .right-info .login:hover {
+    color: #fff;
+    cursor: pointer
+}
+
+header .right-info #language {
+    color: #b8b6b4;
+    position: relative
+}
+
+header .right-info #language ul#dropdown-language {
+    transform: scale(0);
+    position: absolute;
+    width: 200px;
+    background-color: #363c44;
+    z-index: 99;
+    right: 0;
+    padding: 5px;
+    transition: all .1s ease-out
+}
+
+header .right-info .language ul#dropdown-language li {
+    width: 100%;
+    margin: 0;
+    text-align: start
+}
+
+header .right-info .language ul#dropdown-language li:first-child {
+    background: none;
+    display: block;
+    padding: 0
+}
+
+header .right-info .language:hover {
+    color: #fff;
+    cursor: pointer
+}
+

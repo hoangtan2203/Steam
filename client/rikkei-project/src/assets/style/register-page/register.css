@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #E9E9E9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+    height: 100vh;
+    background:radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(./../../image/back_ground/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21;
+}
+.registerForm{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, 5%);
+}
+.registerForm h1{
+    color: #E9E9E9;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 800;
+    font-size: 28px;
+    width: 668px;
+    height: 48.8px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px black;
+}
+p{
+    color: #b8b6b4;
+    font-size: 20px;
+    font-weight: 1;
+}
+.register input{
+    width: 304px;
+    height: 32px;
+    font-size: 17px;
+    background-color: #32353c;
+    border: none;
+    outline: 1px solid white;
+    border-radius: 2px;
+    box-shadow: 0 0 14px rgb(12, 12, 12);
+    color: #b8b6b4;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding: 8px 6px;
+}
+.button-accept{
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    width: 304px;
+    height:50px ;
+    margin-left: 5px;
+    background:  linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%); 
+    color: #ffff;
+    font-size: 20px;
+    box-shadow: 0 0 14px rgb(12, 12, 12);
+    cursor: pointer;
+}
+
+    
+
+

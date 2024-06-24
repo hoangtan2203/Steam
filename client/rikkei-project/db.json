@@ -1,0 +1,33 @@
+
+{
+    "FEATURED_RECOMMENDED":[
+        {
+            "id":1,
+            "name": "PUBG",
+            "img": "https://cdn1.epicgames.com/spt-assets/53ec4985296b4facbe3a8d8d019afba9/pubg-battlegrounds-1lbll.jpg",
+            "Price": "50$",
+            "about": "the best game of 2017"
+        },
+        {
+            "id":2,
+            "name": "DOTA 2",
+            "img": "https://miro.medium.com/v2/resize:fit:1358/0*zndFDCGBmIrwqQxR",
+            "Price": "40$",
+            "about": "the best game of 2018"
+        },
+        {
+            "id":3,
+            "name": "NARAKA",
+            "img": "https://oneesports.blob.core.windows.net/cdn-data/sites/4/2021/06/naraka-ava.jpg",
+            "Price": "25$",
+            "about": "the best game of 2019"
+        },
+        {
+            "id":4,
+            "name": "CSGO 2",
+            "img": "https://cdn.cloudflare.steamstatic.com/apps/csgo/images/csgo_react/social/cs2.jpg",
+            "Price": "10$",
+            "about": "the greatest game of all time"
+        }
+    ]
+}

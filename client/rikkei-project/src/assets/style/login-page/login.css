@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #E9E9E9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* phan than */
+
+#main-login{
+    background:radial-gradient(rgba(24, 26, 33, 0) 0%, #181A21 100%) fixed no-repeat, url(./../../image/back_ground/new_login_bg_strong_mask.jpg) center top no-repeat, #181A21;
+    height: 100vh   
+}
+
+#main-login input {
+    outline: none;
+    border :1px solid #32353c;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: #32353c;
+    
+}
+
+.text-acc {
+    color: #1999ff;
+    font-weight: 500;
+}
+
+.middle{
+    position: relative;
+}
+.middle h1{
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 30px;
+    margin-left: 35%;
+    padding-top:100px ;
+}
+
+.div-center {
+    box-shadow: 0 0 12px #000000;
+    padding: 10px;
+    background-color: #181a21;
+    position: absolute;
+    width: 30%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,25%);
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn button {
+    padding: 16px 70px;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    border-radius: 2px;
+    width: 270px;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.login-btn button:hover{
+    background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+}
+
+.login-a {
+    margin-top: 6px;
+    text-align: center;
+}

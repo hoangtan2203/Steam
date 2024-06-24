@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box
+}
+
+ol,
+ul,
+a {
+    list-style: none;
+    text-decoration: none !important
+}
+
+img {
+    display: block
+}
+
+input,
+button {
+    outline: none;
+    border: none
+}
+
+.main-body {
+    padding-top: 30px;
+    background: #1b2838;
+    padding-bottom: 50px;
+}
+
+.navbarParent {
+    display: flex;
+}
+
+.navbarParent .left-thing {
+    width: 230px;
+}
+
+.navbarParent .right-thing {
+    left: 45%;
+    transform: translate(-50%);
+    position: relative;
+}
+
+.back-ground-main {
+    position: relative;
+    height: 50px;
+    padding-top: 150px;
+    padding-bottom: 64px;
+    margin-bottom: -30px;
+    background: url(./../../image/back_ground/cluster_bg_2.png) bottom center no-repeat
+}
+
+.breadcrumb {
+    padding: 0 !important;
+    background-color: unset !important;
+    margin-top: 40px;
+    color: #56707f;
+    margin-left: 22%;
+}
+
+.breadcrumb a {
+    cursor: pointer;
+    color: #8f98a0;
+    margin-top: 22px;
+    display: inline-block
+}
+
+.breadcrumb a:hover {
+    color: #fff
+}
+
+.back-ground-main .title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.back-ground-main .title p {
+    top: 50%;
+    left: 35%;
+    font-size: 50px;
+    color: #FFFF;
+}
+
+.content {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+}
+.content .nothing{
+    text-align: center;
+}
+.content .nothing .button-nothing{
+    margin-top: 10px;
+    color: white;
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    border: none;
+    outline: none;
+    padding: 10px 5px 10px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.content .nothing .button-nothing:hover{
+   background:  linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+}
+
+
+.product-content {
+    margin-left: 9%;
+    display: flex;
+}
+
+.product-content .product-infor {
+    margin-right: 20px;
+    /* position: relative; */
+}
+
+.product-content .product-infor .slide-flex {
+    display: flex;
+    position: relative;
+    
+}
+.product-content .product-infor .slide-flex .button-btn{
+    right: 0;
+}
+.product-content .product-infor .product {
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    width: 616px;
+    height: 77px;
+    padding: 0 15.4px
+}
+
+.product-content .product-infor .product img {
+    width: 120px;
+    height: 45px;
+    margin-top: 15px
+}
+
+.product-content .product-infor .product .product-detail {
+    position: relative;
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-content .product-infor .product .product-detail span {
+    color: #c7d5e0;
+    margin-left: 20px
+}
+
+.product-content .product-infor .product .product-detail .price {
+    position: absolute;
+    color: #fff;
+    padding-left: 280px;
+    right: 0;
+}
+
+.product-content .product-infor .product-for {
+    color: #c7d5e0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-content .product-infor .product-for .total-price {}
+
+.product-content .product-infor .small-content {
+    color: #c6d4df
+}
+
+.product-content .product-infor .add-delete-product {
+    display: flex;
+    margin-top: 20px;
+    float: right
+}
+
+.product-content .product-infor .add-delete-product a {
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.product-content .product-infor .add-delete-product .add {
+    text-align: center;
+    margin-right: 20px;
+    width: 156px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgb(164, 208, 7) 5%, rgb(107, 135, 5) 95%);
+    border-radius: 2px;
+    cursor: pointer
+}
+
+.product-content .product-infor .add-delete-product .delete {
+    text-align: center;
+    border-radius: 2px;
+    width: 156px;
+    height: 30px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgb(164, 208, 7) 5%, rgb(107, 135, 5) 95%)
+}
+
+.product-content .more-infor img {
+    width: 324px;
+    height: 151px;
+}

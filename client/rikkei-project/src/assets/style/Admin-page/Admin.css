@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+ol,
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  display: block
+}
+
+input,
+button {
+  outline: none;
+  border: none
+}
+
+.list-group a:hover{
+ background-color: blue;
+ color: white;
+ cursor: pointer;
+}
+.col-4.col-md-2.bg-white.vh-100.position-fixed{
+  z-index: 9;
+}
+.list-group a span{
+  color: black;
+}
+.brand-name {
+  color: black;
+}
+.m-2 span{
+  color: green;
+  font-size: 34px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.table thead th{
+  color: black;
+}
+.table td{
+  color: black;
+}
