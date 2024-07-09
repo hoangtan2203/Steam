@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Link} from 'react-router-dom';
+import hand from "./../../../assets/image/Logo/hand.jpg";
 import { useState } from 'react';
 
 const CartItem = ({handleDeleteCart,listcartInfoGame}) => {
