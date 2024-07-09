@@ -13,6 +13,7 @@ const app = express();
 app.use(express.json());
 // req.cookies
 app.use(cookieParser());
+app.use(express.static('public'))
 app.use(cors());
 
 // cổng chạy server

@@ -63,12 +63,7 @@ const Home = (props) => {
   const [isHidden, setIsHidden] = useState(true);
 
   // Phần hình ảnh game
-  const img = [
-    PUBG,
-    CSGO,
-    DOTA2,
-    NARAKA
-  ]
+  
 
   const [gameInfo, setGameInfo] = useState({
     id: null,
@@ -86,6 +81,7 @@ const Home = (props) => {
   // product state
   const products = useSelector(state => state.products);
   const gameData = products.data.productData;
+  console.log('img',gameData)
 
   // khởi tạo data khi load trang lần đầu
   useEffect(() => {
@@ -104,7 +100,7 @@ const Home = (props) => {
     const info = {
       id: game[index]?.id,
       name: game[index]?.name,
-      img: game[index]?.image,
+      img: game[index]?.img,
       price: game[index]?.price
     }
     setGameInfo(info)
@@ -116,7 +112,7 @@ const Home = (props) => {
   const handleUpdatequantity = (id) => {
     if (id) {
      const games = [...listcartInfoGame];
-      games?.push(gameInfo.name)
+      games?.push(gameInfo)
      setListcartInfoGame(games)
       const thisgame = {
         userID: jwtDecode(getCookie("token")).id, 
@@ -156,7 +152,7 @@ const Home = (props) => {
                       <a onClick={() => handleClickApplication(item.id)} >
                         <img
                           className="d-block w-900"
-                          src={img[item.id - 1]}
+                          src={'http://localhost:8800/Images/' + item.img}
                           alt="First slide"
                         />
                       </a>
@@ -195,7 +191,7 @@ const Home = (props) => {
         <div className={classNames({ isHidden: isHidden }, "containers")}>
           <div className='close' onClick={handleClickApplication}>X</div>
           <SubUser
-            img={img[gameInfo.id - 1]}
+            img={gameInfo.img}
             gameTitle={gameInfo.name}
             addproductUpdate={() => handleUpdatequantity(gameInfo.id)}
           />

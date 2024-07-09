@@ -6,7 +6,7 @@ const SubUser = (props) => {
     return (
         <>
             <div className='title'>
-                <img src={props.img}/>
+                <img src={'http://localhost:8800/Images/'+props.img}/>
                 <span>{props.gameTitle}
                 </span>
             </div>

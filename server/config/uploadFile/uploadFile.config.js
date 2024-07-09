@@ -7,7 +7,7 @@ const mimeTypesFilter = require('@meanie/multer-mime-types-filter');
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        return cb(null, './../../public/Images')
+        return cb(null, './public/Images')
     },
     filename: function (req, file, cb) {
         return cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname));
