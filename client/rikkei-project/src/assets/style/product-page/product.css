@@ -126,6 +126,26 @@ button {
 .product-content .product-infor .slide-flex .button-btn{
     right: 0;
 }
+.product-content .product-infor .slide-flex .button-btn .button-btn-detail{
+    background: linear-gradient(to bottom, rgb(164, 208, 7) 5%, rgb(107, 135, 5) 95%);
+    color: #fff;
+    width: 100px;
+    height: 77px;
+    cursor: pointer;
+}
+.product-content .product-infor .slide-flex .button-btn .button-btn-detail:hover{
+    background: #768e1e;
+}
+.product-content .product-infor .slide-flex .button-btn .button-btn-delete{
+    background: linear-gradient(to bottom, rgb(208, 7, 7) 5%, rgb(135, 5, 5) 95%);
+    color: #fff;
+    width: 100px;
+    height: 77px;
+    cursor: pointer;        
+}
+.product-content .product-infor .slide-flex .button-btn .button-btn-delete:hover{
+    background: #821212;
+}
 .product-content .product-infor .product {
     background-color: rgba(0, 0, 0, .2);
     display: flex;
@@ -195,6 +215,9 @@ button {
     border-radius: 2px;
     cursor: pointer
 }
+.product-content .product-infor .add-delete-product .add:hover{
+   background: #768e1e
+}
 
 .product-content .product-infor .add-delete-product .delete {
     text-align: center;
@@ -204,7 +227,9 @@ button {
     cursor: pointer;
     background: linear-gradient(to bottom, rgb(164, 208, 7) 5%, rgb(107, 135, 5) 95%)
 }
-
+.product-content .product-infor .add-delete-product .delete:hover{
+    background: #768e1e;
+}
 .product-content .more-infor img {
     width: 324px;
     height: 151px;

@@ -1,33 +1,56 @@
+/* 
+  Công việc chính của component Product.js
+
+  - Chi tiết giỏ hàng
+  - Xóa sản phẩm, xem chi tiết sản phẩm
+  - Tổng giá trị
+  - Thanh toán
+*/
+
 import React, { useEffect, useState } from 'react';
 import "./../../../assets/style/product-page/product.css";
-import Eternal from "./../../../assets/image/menu mở rộng/menu trái/Eternal.jpg";
 import Navbar from "./../../../components/organisms/navbar/Navbar";
 import eternal from "./../../../assets/image/product/eternal.jpg";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { Link } from 'react-router-dom'
-import { deleteCart, fetchAllCart, sumPriceCart } from '../../../redux/api/cartAPI';
+import {deleteItem} from './../../../redux/reducer/cartSlice'
 
 const Product = (props) => {
-
-  const cartData = useSelector(state => state.cart);
-  console.log('id-here', cartData.data.cart)
   const dispatch = useDispatch();
+  // console.log('from reducer',fromreducer.cart)
 
-  useEffect(() => {
-    dispatch(fetchAllCart())
-    dispatch(sumPriceCart())
-  }, []);
+  // The list of purchased products.
+  const [listProduct,setListproduct] = useState([]);
 
+  // get value in localStorage
+
+  useEffect(()=>{
+    const localdata = JSON.parse(localStorage.getItem('cartitems'));
+    console.log("product", localdata)
+    setListproduct(localdata);
+   
+  },[])
+
+ 
+
+  // calculate the total price with values from localStorage
+  const total = listProduct?.reduce((total, item) => {
+    return total + Number(item.price)
+  }, 0);
+
+  // xóa đi một sản phẩm
   const handleDelete = (id) => {
-    dispatch(deleteCart(id));
-    window.location.reload();
+    dispatch(deleteItem(id));
+    console.log('listProduct', listProduct)
   }
-  console.log(cartData)
-  
+
+  const handleShowDetail = ()=>{
+
+  }
   return (
     <div className='main-body'>
       <div className='navbarParent'>
-        <div className='right-thing'><Navbar/></div>
+        <div className='right-thing'><Navbar /></div>
       </div>
       <div className="back-ground-main">
         <div className='title'>
@@ -39,28 +62,28 @@ const Product = (props) => {
           <a >Tất cả sản phẩm</a>
           <a> &gt; Giỏ hàng của bạn</a>
         </div>
-        {cartData?.data?.cart?.length>0 ?
+        {listProduct?
           <div className="product-content">
             <div className="product-infor">
-              {cartData?.data?.cart?.map((item) => (
+              {listProduct?.map((item) => (
                 < div className='slide-flex'>
                   <div className="product">
-                    <img src={Eternal} />
+                    <img src={'http://localhost:8800/Images/'+item.img} />
                     <div className="product-detail">
                       <span>{item.name}</span>
                       <div className="price">{item.price}.000đ</div>
                     </div>
                   </div>
                   <div className='button-btn'>
-                    <button onClick={() => handleDelete(item.id)} style={{ backgroundColor: 'red', width: '100px', height: '77px' }}>xóa</button>
-                    <button style={{ backgroundColor: 'green', width: '100px', height: '77px' }}>chi tiết</button>
+                    <button className='button-btn-delete' onClick={() => handleDelete(item.id)}>Xóa</button>
+                    <button className='button-btn-detail' onClick={handleShowDetail}>Chi tiết</button>
                   </div>
                 </div>
               ))}
               <div className="sidedown-product">
                 <div className="product-for">
                   <span>Tổng ước tính</span>
-                  <div className="total-price">{cartData?.total?.data[0]?.sumprice}.000đ</div>
+                  <div className="total-price">{total}.000đ</div>
                 </div>
                 <div className="small-content">
                   Đơn hàng này dành cho bản thân hay mua để làm quà? Chọn để tiếp tục

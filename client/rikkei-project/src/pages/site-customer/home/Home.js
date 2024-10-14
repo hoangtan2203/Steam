@@ -23,13 +23,7 @@ import SubUser from "./SubUser";
 import TypeGame from '../../../components/molecules/home-page/TypeGame';
 import LeftContent from '../../../components/molecules/home-page/LeftContent';
 import CartItem from './../../../components/molecules/home/CartItem';
-
-// hình ảnh
-import PUBG from "./../../../assets/image/tìm hiểu và nên xem/Pubg.jpg";
-import CSGO from "./../../../assets/image/tìm hiểu và nên xem/CSGO.jpg";
-import DOTA2 from "./../../../assets/image/tìm hiểu và nên xem/dota2.jpg";
-import NARAKA from "./../../../assets/image/tìm hiểu và nên xem/naraka.jpg";
-
+// hình ảnh 
 import pic1 from "./../../../assets/image/menu mở rộng/menu trái/Eternal.jpg";
 import pic2 from "./../../../assets/image/menu mở rộng/menu trái/chicken.jpg";
 import pic3 from "./../../../assets/image/menu mở rộng/menu trái/chronicles.jpg";
@@ -43,25 +37,32 @@ import { fetchAddCart, fetchAllCart, deleteCart } from '../../../redux/api/cartA
 
 // thư viện hỗ trợ
 import { jwtDecode } from "jwt-decode";
-
+import {addItem,deleteItem} from './../../../redux/reducer/cartSlice';
 
 
 const Home = (props) => {
-  const user = useSelector(state => state.users)
+  const user = useSelector(state => state.users);
+  const [isHidden, setIsHidden] = useState(true);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
     const token = getCookie('token');
-    if (!token && user?.userLogin?.length == 0) {
+    if (!token && user?.userLogin?.length === 0) {
       navigate('/login')
     }
-  }, [])
+  }, [user, navigate]);
+
+  useEffect(() => {
+    if (!isHidden) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isHidden]);
 
   // state hiệu ứng cho subuser
-  const [isHidden, setIsHidden] = useState(true);
-
 
 
   const [gameInfo, setGameInfo] = useState({
@@ -80,8 +81,9 @@ const Home = (props) => {
   // product state
   const products = useSelector(state => state.products);
   const gameData = products.data.productData;
-  console.log('img',gameData)
-
+  // cart state
+  const cartgame = useSelector(state=>state.cart.cart)
+  console.log('from reuducer',cartgame)
   // khởi tạo data khi load trang lần đầu
   useEffect(() => {
     dispatch(fetchProducts())
@@ -90,17 +92,17 @@ const Home = (props) => {
   // khởi tạo cartdata khi load trang lần đầu
   useEffect(() => {
     dispatch(fetchAllCart())
-  }, [gameInfo])
+  }, [])
 
-  // các chức năng khi click vào game bất kì
+  // chức năng lấy thông tin game khi click vào game bất kì
   const handleClickApplication = (id) => {
-    const game = [...gameData]
-    const index = game.findIndex((x) => x.id === id)
+    const index = gameData.findIndex((x) => x.id === id);
+      // thông tin 
     const info = {
-      id: game[index]?.id,
-      name: game[index]?.name,
-      img: game[index]?.img,
-      price: game[index]?.price
+      id: gameData[index]?.id,
+      name: gameData[index]?.name,
+      img: gameData[index]?.img,
+      price: gameData[index]?.price
     }
     setGameInfo(info)
     setIsBlur(!isBlurBg);
@@ -112,29 +114,26 @@ const Home = (props) => {
     if (id) {
      const games = [...listcartInfoGame];
       games?.push(gameInfo)
+      console.log('games',gameInfo)
      setListcartInfoGame(games)
-      const thisgame = {
-        userID: jwtDecode(getCookie("token")).id, 
-        product: games,
-        total: gameInfo?.price,
-        quantity: 1,
-      }
-      console.log("this game",thisgame.userID)
-      dispatch(fetchAddCart(thisgame))
+     dispatch(addItem(gameInfo));
+     setIsBlur(!isBlurBg);
+     setIsHidden(!isHidden);
     }
   }
 
   // chức năng xóa một item trong cart
   const handleDeleteCart = (id) => {
-    dispatch(deleteCart(id))
-    window.location.reload()
+    console.log('id',id)
+    setListcartInfoGame(listcartInfoGame.filter(item=> item.id !== id));
+    dispatch(deleteItem(id))
   }
   return (
     <div className="main">
-      <CartItem 
-      handleDeleteCart = {handleDeleteCart} 
-      listcartInfoGame = {listcartInfoGame}
-      />
+        <CartItem
+        cartgame ={cartgame}
+        handleDeleteCart = {handleDeleteCart}
+        />
       <div className={classNames({ isBlurBg: isBlurBg }, "main-content")}>
         <LeftContent />
         <div className="mid-content">
@@ -181,8 +180,6 @@ const Home = (props) => {
 
             {/* phần thể loại game */}
             <TypeGame handleClickApplication={handleClickApplication} />
-
-          
           </div>
         </div>
       </div>

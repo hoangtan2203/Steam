@@ -72,7 +72,7 @@ const Footer = (props) => {
         &nbsp; | &nbsp;
         <a href="#">Thẻ quà</a>
         &nbsp; | &nbsp;
-        <a href="#" target="_blank" rel="noopener">
+        <a href="https://www.facebook.com/Steam" target="_blank" rel="noopener">
           <img src={facebook} />
           Steam
         </a>

@@ -41,7 +41,6 @@ const Header = (props) => {
         dispatch(userLogout())
         window.location.reload()
     }
-    console.log('token',token)
     return (
 
         <header style={{ display: "flex" }}>

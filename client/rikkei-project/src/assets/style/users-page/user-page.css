@@ -45,10 +45,20 @@ button {
 
 .main .box .product-state{
     position: absolute;
-    top:50%;
     left: 40%;
     color: red;
-
+}
+.main .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    padding: 2px 5px;
+    font-size: 14px;
+    line-height: 1;
 }
 .main .box .product-state .clickposition{
     /* display: none; */

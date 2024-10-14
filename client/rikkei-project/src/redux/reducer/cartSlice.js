@@ -1,30 +1,46 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchAllCart, fetchAddCart,deleteCart, sumPriceCart } from "../api/cartAPI";
+import { getCookie } from "./../api/userAPI";
+import { jwtDecode } from "jwt-decode";
 
+
+// const token = jwtDecode(getCookie('token'));
 const cartReducer = createSlice({
     name:'cart',
     initialState:{
+        // userID:token.id,
         total:null,
         data:[],
+        cart: JSON.parse(localStorage.getItem('cartitems'))||[],
         isLoading:false,
         isSuccess:false,
-        errorMessage:''
-    },
+        errorMessage:'',
+    },  
     reducers:{
-        cartItem: (state,{payload})=> {
-            const {id} = payload;
-            const doesItemExist = state.findItem(x=>x.id === id);
-            if(doesItemExist){
-                return state.data?.map((item)=>{
-                    if(item.id === id){
-                        return {...item}
-                    }
-                    return item
-                })
+        addItem: (state,action)=> {
+            try {
+            const isExist = state.cart.findIndex((g)=>g.id === action.payload.id)
+            if(isExist === -1){
+                const newgame = action.payload
+                state.cart.push(newgame)
+                localStorage.setItem('cartitems', JSON.stringify(state.cart))
             }else{
-                state.data.push(...payload)
+                console.log("Product already exists in the cart");
             }
-        }
+            } catch (error) {
+                console.log('err',error)
+            }
+        },
+        deleteItem:(state,action)=>{
+            try {
+            const idItem = action.payload;
+                const newList =  state.cart.filter(item=> item.id !== idItem );
+                localStorage.setItem('cartitems',JSON.stringify(newList));
+                state.cart = newList
+            } catch (error) {
+                error = 'delete fail'
+            }
+        },
     },
     extraReducers:(builder) => {
         builder
@@ -80,5 +96,5 @@ const cartReducer = createSlice({
 });
 
 const {reducer} =  cartReducer;
-
+export const {addItem,deleteItem} = cartReducer.actions;
 export default reducer;

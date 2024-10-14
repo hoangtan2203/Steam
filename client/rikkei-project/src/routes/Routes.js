@@ -11,7 +11,6 @@ import Login from '../pages/site-customer/user-login/Login';
 import Header from './../components/organisms/header/Header';
 import Footer from './../components/organisms/footer/Footer';
 import Sidebar from '../pages/site-admin/admin-page/Sidebar';
-import { useSelector } from 'react-redux';
 
 
 const Routers = (props) => {
