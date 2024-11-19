@@ -11,6 +11,7 @@ import Login from '../pages/site-customer/user-login/Login';
 import Header from './../components/organisms/header/Header';
 import Footer from './../components/organisms/footer/Footer';
 import Sidebar from '../pages/site-admin/admin-page/Sidebar';
+import ProductDetail from '../pages/site-customer/product/ProductDetail'
 
 
 const Routers = (props) => {
@@ -33,6 +34,10 @@ const Routers = (props) => {
         {
             path: '/product',
             component: <Product />
+        },
+        {
+            path:'/product/product-detail',
+            component:<ProductDetail/>
         },
         {
             path: '/login',

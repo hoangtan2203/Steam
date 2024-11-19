@@ -4,7 +4,6 @@ const productRouter = require('./routes/product.router');
 const cartRouter = require('./routes/cart.router');
 const cors = require('cors');
 const bodyParser  = require('body-parser');
-const fileupload = require('express-fileupload');
 const cookieParser = require('cookie-parser');
 
 require('dotenv').config();

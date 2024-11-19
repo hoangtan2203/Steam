@@ -43,10 +43,15 @@ const Product = (props) => {
     dispatch(deleteItem(id));
     console.log('listProduct', listProduct)
   }
-
+  // xem chi tiết về game
   const handleShowDetail = ()=>{
 
   }
+  
+  const handleBuyGame = () => {
+    console.log('buy')
+  }
+
   return (
     <div className='main-body'>
       <div className='navbarParent'>
@@ -76,7 +81,9 @@ const Product = (props) => {
                   </div>
                   <div className='button-btn'>
                     <button className='button-btn-delete' onClick={() => handleDelete(item.id)}>Xóa</button>
-                    <button className='button-btn-detail' onClick={handleShowDetail}>Chi tiết</button>
+                    <Link  to='product-detail' target='_blank'>
+                      <button className='button-btn-detail' onClick={handleShowDetail}>Chi tiết</button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -91,7 +98,7 @@ const Product = (props) => {
                 </div>
                 <div className="add-delete-product">
                   <div className="add">
-                    <a className="text-box">Mua cho bản thân</a>
+                    <a className="text-box" onClick={handleBuyGame}>Mua cho bản thân</a>
                   </div>
                   <div className="delete">
                     <a className="text-box">Mua để làm quà</a>
