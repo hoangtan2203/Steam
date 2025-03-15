@@ -81,7 +81,10 @@ const Product = (props) => {
                   </div>
                   <div className='button-btn'>
                     <button className='button-btn-delete' onClick={() => handleDelete(item.id)}>Xóa</button>
-                    <Link  to='product-detail' target='_blank'>
+                    <Link
+                     to={`/product/product-detail/${item.id}`}
+                     state = {{product: item}}
+                     >
                       <button className='button-btn-detail' onClick={handleShowDetail}>Chi tiết</button>
                     </Link>
                   </div>

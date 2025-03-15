@@ -36,7 +36,7 @@ const Routers = (props) => {
             component: <Product />
         },
         {
-            path:'/product/product-detail',
+            path:'/product/product-detail/:id',
             component:<ProductDetail/>
         },
         {

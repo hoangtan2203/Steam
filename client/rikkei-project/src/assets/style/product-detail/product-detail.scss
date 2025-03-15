@@ -19,27 +19,70 @@
         display: flex;
         margin: 0 auto; 
         margin-top: 100px;
-        justify-content:center;
+        justify-content:space-between;
         align-items: center;
         width: 940px;
+        height: 410px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 120%);
         .game-video{
-            width: 616px;
-            height: 200px;
+            width: 600px;
+            height: 100%;
             background-color: white;
             .video{
 
             }
-            .decription{
-    
+            .video-slider{
+                height: 100%;
             }   
         }
 
         .decription{
-            background-color: black;
+            height: 100%;
             width: 324px;
-            height: 200px;
+            .game-img{
+                background-color: black;
+                width: 324px;
+                height: 151px;
+                margin-bottom: 7px;
+            }
+            
             .short-introduce{
+                color: #c6d4df;
+                margin-top: 5px;
+                max-height: 121px;
+                overflow: hidden;
+                font-size: 14px;
+                line-height: 18px;
+                padding-right: 16px;
+                font-family:  Arial, Helvetica, sans-serif;;
+            }
+            .user-review{
+                display: flex;
+                line-height: 16px;
+                margin-top: 7px;
+            }
+            .all-reviews{
+                display: flex;
+                line-height: 16px;
+            }
+            .release-date{
+                display: flex;
+                line-height: 16px;
+            }
+            .developer{
+                display: flex;
+                line-height: 16px;
+            }
+            .publisher{
+                display: flex;
+                line-height: 16px;
+            }
 
+            .subtitle-collumn{
+                color:#556772;
+                font-size: 14px;
+                min-width: 130px;
+                padding-right:10px
             }
         }
        

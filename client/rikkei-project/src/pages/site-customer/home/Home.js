@@ -81,6 +81,7 @@ const Home = (props) => {
   // product state
   const products = useSelector(state => state.products);
   const gameData = products.data.productData;
+  console.log("gamedata",gameData)
   // cart state
   const cartgame = useSelector(state=>state.cart.cart)
   console.log('from reuducer',cartgame)
@@ -102,6 +103,7 @@ const Home = (props) => {
       id: gameData[index]?.id,
       name: gameData[index]?.name,
       img: gameData[index]?.img,
+      decription: gameData[index]?.decription,
       price: gameData[index]?.price
     }
     setGameInfo(info)
