@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+.related-item {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    background: radial-gradient(62.67% 62.67% at 62.67% 100%, rgba(255, 255, 255, 0.15) 0%, rgba(116, 133, 140, 0.15) 100%);
+
+    .related-item-content {
+        height: 200px;
+        width: 940px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background: radial-gradient(62.67% 62.67% at 62.67% 100%, rgba(255, 255, 255, 0.15) 0%, rgba(116, 133, 140, 0.15) 100%);
+        border-radius: 5px;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, .25);
+
+        .more-game {
+            .more-game-content {
+                padding: 16px;
+
+                .more-game-header {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .more-game-header-title {
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+                        letter-spacing: 1px;
+                        flex: 1;
+                        margin-left: 6px;
+                        color: #acb2b8;
+                    }
+
+                    .more-game-header-see-all {
+                        a {
+                            border-radius: 2px;
+                            border: none;
+                            padding: 1px;
+                            display: inline-block;
+                            cursor: pointer;
+                            text-decoration: none !important;
+                            color: #66c0f4 !important;
+                            background: #212c3d;
+
+                            span {
+                                padding: 0 15px;
+                                font-size: 15px;
+                                line-height: 30px;
+                                color: #66c0f4 !important;
+                            }
+                        }
+                    }
+                }
+
+                .more-game-slider {}
+            }
+        }
+    }
+
+}

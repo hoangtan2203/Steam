@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+.vote-buttons {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    .vote-button {
+        display: inline-block;
+        padding: 5px;
+        background: #1f2733;
+        color: #66c0f4 ;
+        border-radius: 2px;
+        margin-right: 3px;
+        font-size: 13px;
+
+        img {}
+    }
+    .vote-button:hover{
+        background:#66c0f4;
+        color: white ;
+    }
+}

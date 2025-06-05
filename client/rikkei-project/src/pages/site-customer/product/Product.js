@@ -28,7 +28,6 @@ const Product = (props) => {
     const localdata = JSON.parse(localStorage.getItem('cartitems'));
     console.log("product", localdata)
     setListproduct(localdata);
-   
   },[])
 
  
@@ -67,7 +66,12 @@ const Product = (props) => {
           <a >Tất cả sản phẩm</a>
           <a> &gt; Giỏ hàng của bạn</a>
         </div>
-        {listProduct?
+        {!listProduct?
+        <div className='nothing'>Hiện chưa có sản phẩm nào được chọn
+        <br />
+        <Link to="/">
+          <button className='button-nothing'>Quay lại trang chủ</button></Link>
+      </div>:
           <div className="product-content">
             <div className="product-infor">
               {listProduct?.map((item) => (
@@ -112,12 +116,8 @@ const Product = (props) => {
             <div className="more-infor">
               <img src={eternal} />
             </div>
-          </div> :
-          <div className='nothing'>Hiện chưa có sản phẩm nào được chọn
-            <br />
-            <Link to="/">
-              <button className='button-nothing'>Quay lại trang chủ</button></Link>
-          </div>
+          </div> 
+          
         }
       </div>
     </div>

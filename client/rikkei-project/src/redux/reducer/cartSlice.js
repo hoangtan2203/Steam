@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchAllCart, fetchAddCart,deleteCart, sumPriceCart } from "../api/cartAPI";
-import { getCookie } from "./../api/userAPI";
-import { jwtDecode } from "jwt-decode";
+
 
 
 // const token = jwtDecode(getCookie('token'));

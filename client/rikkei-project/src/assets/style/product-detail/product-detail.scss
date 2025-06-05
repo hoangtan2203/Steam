@@ -4,87 +4,358 @@
     border: 0;
     font-size: 100%;
     box-sizing: border-box;
-  }
+}
 
-  .main-product-detail{
+.main-product-detail {
     background-color: #1b2838;
     padding-top: 30px;
     padding-bottom: 30px;
+    background-image: url('./../../../../public/images/game-page-background.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-width: 972px;
 
-    .fix-navbar-position{
+    .fix-navbar-position {
         padding-left: 162px;
     }
 
-    .video-decription{
-        display: flex;
-        margin: 0 auto; 
-        margin-top: 100px;
-        justify-content:space-between;
-        align-items: center;
+    .page-content {
         width: 940px;
-        height: 410px;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 120%);
-        .game-video{
-            width: 600px;
-            height: 100%;
-            background-color: white;
-            .video{
-
+        margin: 0 auto;
+        margin-top: 100px;
+        .page-content-header{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            .community-hub-bnt{
+                background: rgba(103, 193, 245, 0.2);
+                border-radius: 2px;
+                padding: 1px;
+                cursor: pointer;
+                span{
+                    color: #67c1f5;
+                    padding: 0 15px;
+                    font-size: 15px;
+                    line-height: 30px;
+                }
             }
-            .video-slider{
-                height: 100%;
-            }   
-        }
-
-        .decription{
-            height: 100%;
-            width: 324px;
-            .game-img{
-                background-color: black;
-                width: 324px;
-                height: 151px;
-                margin-bottom: 7px;
-            }
+            .community-hub-bnt:hover{
+                background:linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+                span{
+                    color: white;
+                }
             
-            .short-introduce{
-                color: #c6d4df;
-                margin-top: 5px;
-                max-height: 121px;
-                overflow: hidden;
-                font-size: 14px;
-                line-height: 18px;
-                padding-right: 16px;
-                font-family:  Arial, Helvetica, sans-serif;;
-            }
-            .user-review{
-                display: flex;
-                line-height: 16px;
-                margin-top: 7px;
-            }
-            .all-reviews{
-                display: flex;
-                line-height: 16px;
-            }
-            .release-date{
-                display: flex;
-                line-height: 16px;
-            }
-            .developer{
-                display: flex;
-                line-height: 16px;
-            }
-            .publisher{
-                display: flex;
-                line-height: 16px;
-            }
-
-            .subtitle-collumn{
-                color:#556772;
-                font-size: 14px;
-                min-width: 130px;
-                padding-right:10px
             }
         }
-       
+        .game-title {
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal;
+            padding-left: 0px;
+            font-size: 26px;
+            line-height: 32px;
+            text-overflow: ellipsis;
+            color: white;
+        }
+
+        .video-decription {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 410px;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 120%);
+
+            .game-video {
+                width: 600px;
+                height: 100%;
+                background-color: white;
+
+                .video {}
+
+                .video-slider {
+                    height: 100%;
+                }
+            }
+
+            .decription {
+                height: 100%;
+                width: 324px;
+
+                .game-img {
+                    background-color: black;
+                    width: 324px;
+                    height: 151px;
+                    margin-bottom: 7px;
+                }
+
+                .short-introduce {
+                    color: #c6d4df;
+                    margin-top: 5px;
+                    max-height: 121px;
+                    overflow: hidden;
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding-right: 16px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    ;
+                }
+
+                .user-review {
+                    display: flex;
+                    line-height: 16px;
+                    margin-top: 7px;
+                }
+
+                .all-reviews {
+                    display: flex;
+                    line-height: 16px;
+                }
+
+                .release-date {
+                    display: flex;
+                    line-height: 16px;
+                }
+
+                .developer {
+                    display: flex;
+                    line-height: 16px;
+                }
+
+                .publisher {
+                    display: flex;
+                    line-height: 16px;
+                }
+
+                .subtitle-collumn {
+                    color: #556772;
+                    font-size: 14px;
+                    min-width: 130px;
+                    padding-right: 10px
+                }
+            }
+
+        }
     }
-  }
+
+    .customer-review {
+        height: 500px;
+        border-top: 1px solid #000;
+
+        .customer-review-content {
+            width: 940px;
+            margin: 0 auto;
+
+            .customer-review-content-header {
+                padding-bottom: 4px;
+                margin-top: 40px;
+                background-image: url(./../../../../public/images/maincol_gradient_rule.png);
+                background-repeat: no-repeat;
+                background-position: bottom left;
+                text-transform: uppercase;
+                font-family: "Motiva Sans", Sans-serif;
+                font-weight: 300;
+                font-size: 14px;
+                color: #fff;
+                // margin: 0 0 10px;
+                letter-spacing: 0.03em;
+                font-weight: normal;
+                padding-top: 2px;
+            }
+
+            .reviews-infor {
+                border-bottom: 1px solid #000;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+
+            .review-summary {
+                display: flex;
+
+                .user-review-header {
+                    font-family: "Motiva Sans", Sans-serif;
+                    font-weight: 300;
+                    font-weight: normal;
+                    font-size: 14px;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    padding-bottom: 5px;
+                    letter-spacing: 2px;
+                }
+
+                .review-summary-left-col {
+                    width: 616px;
+
+                    .user-review-content {
+                        display: flex;
+                        background-color: rgba(0, 0, 0, 0.2);
+                        margin-bottom: 26px;
+                        background-image: url(./../../../../public/images/maincol_gradient_rule.png);
+                        background-repeat: no-repeat;
+
+                        .user-review-content-left-col {
+                            padding: 8px;
+                            display: flex;
+
+                            .avatar {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: linear-gradient(to bottom, rgba(106, 106, 106, 1) 5%, rgba(85, 85, 85, 1) 95%);
+                                width: 36px;
+                                height: 36px;
+                                position: relative;
+                                border-radius: 0;
+                                padding: 1px;
+                                margin-right: 8px;
+
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                    padding: 1px;
+                                    border-radius: 0;
+                                    border: none;
+                                }
+                            }
+
+                            .personal-name {
+                                display: inline-block;
+                            }
+                        }
+
+                        .user-review-content-right-col {
+                            width: 400px;
+                            margin-left: 50px;
+                            display: flex;
+                            flex-direction: column;
+
+                            .vote-header {
+                                margin: 8px 0 13px;
+                                display: block;
+                                background: rgba(0, 0, 0, 0.2);
+                                height: 40px;
+
+                                .vote-icon-header {
+                                    display: flex;
+
+                                    .vote-icon {
+                                        background: url(./../../../../public/images/icon_thumbsDown_v6.png);
+                                        width: 40px;
+                                        height: 40px;
+                                        margin-right: 5px;
+                                    }
+
+                                    .vote-ellipsis {}
+                                }
+                            }
+
+                            .content {
+                                margin-right: 8px;
+                                font-family: "Motiva Sans", Sans-serif;
+                                font-weight: normal;
+                                font-size: 13px;
+                                line-height: 17px;
+                                color: #acb2b8;
+                                overflow-wrap: break-word;
+                                overflow: hidden;
+                            }
+                            .hr {
+                                background-color: #3c4051;
+                                height: 3px;
+                                margin-top: 7px;
+                            }
+                            .review-was-helpful {
+                                display: inline-block;
+                                margin-right: 9px;
+                                color: #8091a2;
+                                margin-top: 5px;
+                                font-size: 12px;
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+
+                }
+
+                .review-summary-right-col {
+                    margin-left: 14px;
+                    width: 308px;
+
+                    .recently-user-review-content {
+                        background: linear-gradient(to right, rgba(34, 50, 70, 1) -1%, rgba(34, 50, 70, 1) 0%, rgba(34, 50, 70, 0) 92%, rgba(34, 50, 70, 0) 100%);
+
+                        .short-header {
+                            height: 24px;
+                            color: #819db8;
+                            background-color: rgba(0, 0, 0, 0.3);
+                            margin-bottom: 6px;
+                            display: flex;
+                            line-height: 15px;
+
+                            img {
+                                width: 24px;
+                                height: 24px;
+                                float: left;
+                            }
+
+                            .personal-name {
+                                display: block;
+                                float: left;
+                                margin-top: 5px;
+                                margin-left: 6px;
+
+                                span {
+                                    color: #819db8;
+                                    font-size: 12px;
+                                }
+                            }
+
+                            .hours {
+                                margin-top: 6px;
+                                margin-left: 6px;
+                                float: left;
+                                color: #819db8;
+                                opacity: 0.5;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .review-content {
+                            padding-left: 8px;
+
+                            .postedDate {
+                                margin: 0px 0px 8px;
+                                color: #8091a2;
+                                text-transform: uppercase;
+                                font-size: 10px;
+                                opacity: 0.5;
+                            }
+
+                            .content {
+                                color: #9fb4c9;
+                                font-size: 12px;
+                            }
+
+                            .hr {
+                                background-color: #1f1f1f;
+                                height: 1px;
+                                margin-top: 7px;
+                            }
+
+                            .control-block {
+                                .review-was-helpful {
+                                    display: inline-block;
+                                    margin-right: 9px;
+                                    color: #8091a2;
+                                    font-size: 12px;
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
